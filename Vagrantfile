@@ -19,6 +19,8 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.provision :chef_solo do |chef|
     chef.cookbooks_path = ["cookbooks", "site-cookbooks"]
 
+  config.ssh.max_tries = 150
+
     chef.add_recipe "apt"
     chef.add_recipe "vim"
     chef.add_recipe "nodejs"
