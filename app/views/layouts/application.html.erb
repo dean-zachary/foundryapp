@@ -19,7 +19,12 @@
 
 </head>
 <body>
-  <p class= "notice"><%= notice %></p>
+  <div class= "alert" role= "alert">
+    <% if alert %>
+    <p id="alert" class="alert alert-info"><%= alert %></p>
+<% end %>
+ 
+  </div>
 
 <nav class="navbar navbar-inverse navbar-fixed-top">
   <div class="container-fluid">
