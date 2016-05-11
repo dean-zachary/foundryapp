@@ -19,6 +19,8 @@
 
 </head>
 <body>
+  <p class= "notice"><%= notice %></p>
+
 <nav class="navbar navbar-inverse navbar-fixed-top">
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
@@ -61,6 +63,15 @@
             <li role="separator" class="divider"></li>
             <li><a href="#">One more separated link</a></li>
           </ul> -->
+        </li>
+      </ul>
+      <ul class="nav pull-right">
+        <li>
+          <% if user_signed_in? %>
+          <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>
+          <% else %>
+          <%= link_to('Login', new_user_session_path) %>
+          <% end %>
         </li>
       </ul>
     </div><!-- /.navbar-collapse -->
