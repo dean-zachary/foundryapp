@@ -10,4 +10,7 @@ class ApplicationController < ActionController::Base
 	  @message = params[:message]
 	  UserMailer.contact_form(@email, @name, @messag).deliver_now
     end
+    rescue_from CanCan::AccessDenied do |exception|
+    	redirect_to main_app.root_url, :alert => exception.message
+    end
 end
