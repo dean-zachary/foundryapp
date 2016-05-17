@@ -2,7 +2,7 @@
 
   <p id="notice"><%= notice %></p>
 
-  <h1>Listing Products</h1>
+  <h1 class= "text-center">Our Bikes!</h1>
 
 <!-- <table>
   <thead>
@@ -24,12 +24,16 @@
 <div class="container">
   <div class="row">
     <% @products.each do |product| %>
-      <div class="col-sm-2 col-md-4">
-        <%= image_tag(product.image_url, class: "img-responsive") %>
-        <h1><%= product.name %></h1>
-        <p><%= product.description %></p>
-        <p><%= product.color %></p>
-        <strong><%= product.price %></strong>
+      <div class="col-sm-4 col-md-4">
+        <div class="thumbnail">
+          <%= image_tag(product.image_url, class: "img-responsive .center-block") %>
+          <div class="caption">
+            <h1 id="nameofproduct"><%= product.name %></h1>
+            <p id="descriptionofproduct"><%= product.description %></p>
+            <p id="productcolor"><%= product.color %></p>
+            <strong><%= product.price %></strong>
+          </div>
+        </div>
       </div><!-- /col -->
     <% end %>
   </div>
