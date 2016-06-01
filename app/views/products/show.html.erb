@@ -8,7 +8,7 @@
 
   <p class="thumbnail">
     <strong class="sr-only" >Image url:</strong>
-    <%= @product.image_url %>
+    <%= image_tag(@product.image_url) %>
   </p>
 
   <p>
@@ -27,7 +27,15 @@
 	  <strong>Price:</strong>
 	  <%= @product.price %>
   </p>
+  
+  <p>Average Rating: <div class="rated" data-score="<%= @product.average_rating %>"></div> </p>
+  
+  </div>
+
+
 
   <%= link_to 'Edit', edit_product_path(@product) %> |
   <%= link_to 'Back', products_path %>
-</div>
+
+  <%= render 'new_comment' %>
+  <%= render 'comments' %>
