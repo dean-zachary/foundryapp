@@ -25,8 +25,9 @@
   <div class="row">
     <% @products.each do |product| %>
       <div class="col-sm-4 col-md-4">
-        <div class="thumbnail">
- <%= link_to (image_tag(product.image_url, class: "img-responsive .center-block")), product %>
+       <div class="thumbnail">
+
+          <%= link_to (image_tag(product.image_url, class: "img-responsive .center-block")), product %>
           <div class="caption">
             <h1 id="nameofproduct"><%= product.name %></h1>
             <p id="descriptionofproduct"><%= product.description %></p>

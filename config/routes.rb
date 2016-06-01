@@ -18,6 +18,7 @@ Rails.application.routes.draw do
   post 'static_pages/thank_you'
 
 
+
   resources :orders, only: [:index, :show, :create, :destroy]
 
   # The priority is based upon order of creation: first created -> highest priority.
