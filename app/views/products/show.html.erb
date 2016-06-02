@@ -29,7 +29,8 @@
   </p>
   
   <p>Average Rating: <div class="rated" data-score="<%= @product.average_rating %>"></div> </p>
-  
+    
+
   </div>
 
 
@@ -39,3 +40,7 @@
 
   <%= render 'new_comment' %>
   <%= render 'comments' %>
+    
+    <div class="container-fluid">
+      <%= will_paginate @comments, container: false %>
+    </div>
