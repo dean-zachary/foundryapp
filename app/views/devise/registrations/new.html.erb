@@ -5,13 +5,13 @@
       <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
         <%= devise_error_messages! %>
       <div class="field">
-         <%= f.label :first_name %>
-         <%= f.text_field :first_name %> 
+         <%= f.label :first_name, class: "sr-only" %>
+         <%= f.text_field :first_name, :placeholder => "First Name", class: "form-control" %> 
       </div>
 
       <div class="field">
-        <%= f.label :last_name %>
-        <%= f.text_field :last_name %>
+        <%= f.label :last_name, class: "sr-only" %>
+        <%= f.text_field :last_name,  :placeholder => "Last Name", class: "form-control" %>
       </div> 
 
       <div class="field">

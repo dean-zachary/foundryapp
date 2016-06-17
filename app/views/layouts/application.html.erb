@@ -19,7 +19,9 @@
   <%= csrf_meta_tags %>
 
 </head>
+
 <body>
+
   <div class= "alert" role= "alert">
     <% if alert %>
     <p id="alert" class="alert alert-info"><%= alert %></p>
@@ -50,25 +52,11 @@
         <li>
           <%= form_tag("/products", method: "get", class: "navbar-form") do %>
             <%= label_tag(:q, "Search for:", class: "sr-only" ) %>
-            <%= text_field_tag(:q, nil, :placeholder => "Search our bikes!")  %>
+            <%= text_field_tag(:q, nil, :placeholder => "Search our bikes!", class: "form-control")  %>
             <%= button_tag(type: "submit", class: "btn btn-default buttonsearch") do%>
               <span class ="glyphicon glyphicon-search searchicon"></span>
             <% end %>
           <% end %>
-         </li>
-    
-
-<!--         <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
-          <ul class="dropdown-menu">
-            <li><a href="#">Action</a></li>
-            <li><a href="#">Another action</a></li>
-            <li><a href="#">Something else here</a></li>
-            <li role="separator" class="divider"></li>
-            <li><a href="#">Separated link</a></li>
-            <li role="separator" class="divider"></li>
-            <li><a href="#">One more separated link</a></li>
-          </ul> -->
         </li>
       </ul>
       <ul class="nav pull-right">
@@ -85,15 +73,18 @@
 </nav>
 
 
+
 <%= yield %>
 
-<footer class="footer site-footer"> 
-  <ul class="footnav">
-    <li><a href="/static_pages/index">HOME</a></li>
-    <li><a href="/static_pages/contact">CONTACT</a></li> 
-  </ul>
+<footer class="site-footer">
+  <div class="container-fluid"> 
+    <ul class="footnav">
+      <li><a href="/static_pages/index">HOME</a></li>
+      <li><a href="/static_pages/contact">CONTACT</a></li> 
+    </ul>
 
-  <p class="copyright">&copy; 2016 Bike Berlin</p>
+    <p class="copyright">&copy; 2016 Bike Berlin</p>
+  </div>
 
 </footer>
 

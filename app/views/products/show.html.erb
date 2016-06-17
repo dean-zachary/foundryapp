@@ -32,7 +32,7 @@
     
 
   </div>
-
+<div class="container">
 
 
   <%= link_to 'Edit', edit_product_path(@product) %> |
@@ -41,6 +41,7 @@
   <%= render 'new_comment' %>
   <%= render 'comments' %>
     
-    <div class="container-fluid">
+    <div class="container">
       <%= will_paginate @comments, container: false %>
     </div>
+</div>

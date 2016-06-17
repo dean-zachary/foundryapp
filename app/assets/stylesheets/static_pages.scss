@@ -2,10 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-body { 
-padding-top: 70px;
 
-}
 .searchicon {
 	color: blue;
 }
@@ -13,25 +10,7 @@ padding-top: 70px;
 .buttonsearch {
 	background-color: yellow;
 }
-.site-footer {
-	position: absolute;
-	bottom: 0;
-	width: 100%;
-	height: 60px;
-	background-color:black;
-	color: white;	
-	overflow: hidden;
-}
 
-.footnav {
-	text-align: center;
-	text-decoration: none;
-	list-style: none;
-}
-
-.footnav a:hover {
-	text-decoration: none;
-}
 
 .bikeimg {
     display: block;
