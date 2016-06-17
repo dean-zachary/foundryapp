@@ -1,6 +1,11 @@
 class UserMailer < ApplicationMailer
   default from: "dean_zachary@live.com"
 
+  def registration_confimation(user)
+  	@user = user
+  	mail(:to => "{#user.name} <#{user.email}>", :subject => "Registration Confirmation")
+  end
+  
   def contact_form(email, name, message)
   @message = message
     mail(:from => email,
@@ -8,9 +13,5 @@ class UserMailer < ApplicationMailer
         :subject => "A new contact form message from #{name}")
   end
 
-  def welcome(user)
-  	@appname="Bike Berlin"
-  	mail(:to => user.email,
-  		:subject => "Welcome! Thank you for joining #{(@appname)}")
-  end
+
 end

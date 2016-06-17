@@ -30,12 +30,25 @@ class UsersController < ApplicationController
 
     respond_to do |format|
       if @user.save
+        UserMailer.registration_confirmation(@user).deliver
         format.html { redirect_to @user, notice: 'User was successfully created.' }
         format.json { render :show, status: :created, location: @user }
       else
         format.html { render :new }
         format.json { render json: @user.errors, status: :unprocessable_entity }
       end
+    end
+  end
+  
+  def confirm_email
+    user = User.find_by_confirm_token(params[:id])
+    if user
+      user.email_active
+      flash[:success] = "Welcome to Bike Berlin! Your email has been confirmed. Please login!"
+      redirect_to signin_url
+    else
+      flash[:error] = "Sorry. User does not exist"
+      redirect_to root_url
     end
   end
 
