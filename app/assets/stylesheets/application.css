@@ -14,13 +14,16 @@
  *= require_self
  */
 html {
+	margin: 0;
+	padding: 0;
 	position: relative;
 	min-height: 100%;
 }
 
 body {
-	margin-bottom: 60px;
+	padding-bottom: 60px;
 }
+
 
 
 .site-footer {
