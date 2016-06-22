@@ -18,7 +18,7 @@ class CommentsController < ApplicationController
 	def destroy
 		@comment = Comment.find(params[:id])
 		product = @comment.product
-		authorize! :destroy, @comment
+	
 		@comment.destroy
 		redirect_to product
 	end
