@@ -14,28 +14,10 @@
  *= require_self
  */
 
-* {
-	margin: 0;
-}
 
-html,
-body {
-	height: 100%;
-}
-
-.wrapper {
-	min-height: 100%;
-	height: auto !important;
-	height: 100%;
-	margin: 0 auto-5em;
-}
-
-.push {
-	height: 5em;
-}
 
 .site-footer {
-    height: 5em;
+    height: 65px;
    	background-color:black;
 	color: white;	
 	overflow: hidden;
@@ -49,4 +31,8 @@ body {
 
 .footnav a:hover {
 	text-decoration: none;
+}
+
+.product-reviews {
+	display: block;
 }
