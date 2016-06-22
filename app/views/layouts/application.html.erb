@@ -22,8 +22,7 @@
 
 <body>
 
-<div class="wrapper">
-
+<div id="wrap">
 <nav class="navbar navbar-inverse navbar-fixed-top">
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
@@ -77,20 +76,24 @@
 
 <%= yield %>
 
-  <div class="push"></div>
+<div id="push">
 </div>
 
-<footer class="site-footer">
-  <div class="container-fluid"> 
-    <ul class="footnav">
+</div>
+
+<div class= "navbar navbar-inverse navbar-fixed-bottom" id="footer">
+  <div class="container">
+  <ul class="footnav">
       <li><a href="/static_pages/index">HOME</a></li>
       <li><a href="/static_pages/contact">CONTACT</a></li> 
     </ul>
 
-    <p class="copyright">&copy; 2016 Bike Berlin</p>
+    <p class="copyright navbar-text">&copy; 2016 Bike Berlin</p>
+
   </div>
 
-</footer>
+</div>
+
 
 
 

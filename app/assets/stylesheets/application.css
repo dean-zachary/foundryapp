@@ -13,15 +13,23 @@
  *= require_tree .
  *= require_self
  */
-
-
-
-.site-footer {
-    height: 65px;
-   	background-color:black;
-	color: white;	
-	overflow: hidden;
+html,
+body {
+	height: 100%;
 }
+
+#wrap {
+	min-height: 100%;
+	height: auto !important;
+	height: 100%;
+	margin: 0 auto -60px;
+}
+
+#push,
+#footer {
+	height: 60px;
+}
+
 
 .footnav {
 	text-align: center;
