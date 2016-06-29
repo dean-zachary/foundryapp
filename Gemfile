@@ -48,6 +48,14 @@ end
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'web-console', '~> 2.0'
+
+  gem 'guard'
+
+  gem 'guard-rspec', require: false
+
+  gem 'spork-rails'
+
+  gem 'guard-spork'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
