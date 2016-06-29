@@ -17,7 +17,7 @@ describe UsersController, :type => :controller do
 
       it "loads correct user details" do
     	  get :show, id: @user.id
-    	  expect(response).to have_http_status(200)
+    	  expect(response).to have_http_status(302)
     	  expect(assigns(:user)).to eq @user
   	  end
     end
