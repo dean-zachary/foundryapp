@@ -8,7 +8,7 @@
 
   <p class="thumbnail">
     <strong class="sr-only" >Image url:</strong>
-    <%= image_tag(@product.image_url) %>
+    <%= image_tag(@product.image_url, width: "500", class: "img-zoom", data_zoom_image: @product.image_url) %>
   </p>
 
   <p>
