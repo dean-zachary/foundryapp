@@ -10,7 +10,7 @@ class OrdersController < ApplicationController
 	end
 
 	def show
-		@order Order.find(params[:id]).to_json(:include => [{:product => {:only => :name}}, {:user => {:only => :email}}])
+		@order = Order.find(params[:id]).to_json(:include => [{:product => {:only => :name}}, {:user => {:only => :email}}])
 		respond_with @order
 	end
 
@@ -31,7 +31,7 @@ class OrdersController < ApplicationController
 	def json_request?
 		request.format.json?
 	end
-	
+
 	private
 
 	def order_params
