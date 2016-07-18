@@ -23,6 +23,7 @@ $scope.addOrder = function() {
 	if(!$scope.neworder.product_id || $scope.newOrder.total === ''){ return; }
 	order = models.orders.save($scope.newOrder, function(){
 		recent_order = models.orders.get({id: order.id});
+		$scope.orders.push(recent_order);
 		$scope.newOrder = '';
 	});
 
