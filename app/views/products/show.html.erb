@@ -3,7 +3,9 @@
 
   <p>
     <strong class="sr-only">Name:</strong>
+    <% cache @product do %>
     <%= @product.name %>
+    <% end %>
   </p>
 
   <p class="thumbnail">
@@ -14,7 +16,9 @@
   <p>
     <strong class="sr-only">Description:</strong>
     <span class="glyphicon glyphicon-hand-right" id="descriptionhand"></span>
-    <%= @product.description  %>
+    <% cache @product do %>
+    <%= @product.description %>
+    <% end %>
   </p>
 
 

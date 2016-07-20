@@ -25,6 +25,9 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'stripe'
 
 gem 'angularjs-rails'
+
+gem 'dalli', '~>1.0.5'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
