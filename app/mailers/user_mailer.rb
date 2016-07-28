@@ -8,5 +8,12 @@ class UserMailer < ApplicationMailer
         :subject => "A new contact form message from #{name}")
   end
 
+  def order_confirm(email)
+    @name = name
+  	@email = email
+  	mail( :to => user.email, 
+         :subject => "Thank you for your purchase!")
+  end
+  
 
 end

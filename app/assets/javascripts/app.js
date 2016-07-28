@@ -1,6 +1,6 @@
 var app = angular.module('shop', ['ngResource']);
 
-$(document).on('ready page:load', function() {
+$(document).on('turbolinks:load', function() {
 	angular.bootstrap(document.body, ['shop'])
 });
 
@@ -15,6 +15,7 @@ $(document).on('ready page:load', function() {
 }]);
 
 app.controller('OrdersCtrl', ['$scope', 'models', function($scope, models){
+
 $scope.orders = models.orders.query();
 $scope.products = models.products.query();
 

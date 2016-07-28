@@ -18,7 +18,7 @@ class OrdersController < ApplicationController
 	end
 
 	def create
-		@order = Order.create(oder_params)
+		@order = Order.create(order_params)
 		respond_with @order
 	end
 

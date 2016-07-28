@@ -35,8 +35,7 @@
   <p>Average Rating: <div class="rated" data-score="<%= @product.average_rating %>"></div> </p>
   
   <%= form_tag "/payments/create" do %>
-    <%= hidden_field_tag(:product_id, @product.id) %>
-    <%= render partial: "shared/stripe_checkout_button" %>
+      <%= render partial: "shared/stripe_checkout_button" %>
   
   <% end %>  
 
@@ -44,11 +43,11 @@
 <div class="container">
 
 
-  <%= link_to 'Edit', edit_product_path(@product) %> |
+ <!-- <%= link_to 'Edit', edit_product_path(@product) %> |
   <%= link_to 'Back', products_path %>
 
   <%= render 'new_comment' %>
-  <%= render 'comments' %>
+  <%= render 'comments' %> -->
     
     <div class="container">
       <%= will_paginate @comments, container: false %>

@@ -1,11 +1,11 @@
 Rails.application.routes.draw do
   devise_for :users
-
+  resources :products do
+  resources :comments
+  end
   resources :users 
 
-  resources :products do
-    resources :comments
-  end
+  resources :orders, only: [:index, :show, :create, :destroy]  
   
   get 'static_pages/about'
 
@@ -19,7 +19,7 @@ Rails.application.routes.draw do
 
 
 
-  resources :orders, only: [:index, :show, :create, :destroy]
+ 
 
   post 'payments/create'
   # The priority is based upon order of creation: first created -> highest priority.
